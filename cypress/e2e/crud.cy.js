@@ -1,5 +1,5 @@
-// CRUD Tests - Movie Reviews
-describe('CRUD Operations - Movie Reviews', () => {
+// CRUD Tests - 03 Movie Reviews
+describe('CRUD Operations - 03 Movie Reviews', () => {
   beforeEach(() => {
     cy.visit('/');
     cy.get('.nav-link[data-page="movies"]').click();
@@ -105,7 +105,7 @@ describe('CRUD Operations - Movie Reviews', () => {
     cy.request({
       method: 'POST',
       url: '/api/movies',
-      body: {"title":"Test Movie","genre":"Action","year":"2023","rating":"5","review":"Great film!","watchStatus":"watched"},
+      body: {"title": "Test Movie", "genre": "Action", "year": "2023", "rating": "5", "review": "Great film!", "watchStatus": "watched"},
     }).its('status').should('eq', 201);
   });
 
